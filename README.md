@@ -3,19 +3,56 @@
 
 ### Following features implemented
 
-custom renderer for modern response structure
+- Custom renderer for modern response structure
+```javascript
+{
+    "code": 10000,
+    "messsage": "success",
+    "data": {}
+}
+```
 
-custom exception handler
+- Custom exception handler
+```javascript
+{
+    "code": 50000,
+    "message": "division by zero",
+    "data": null
+}
+```
 
-django filters for filtering queryset in a easy way
+- Friendly validation error
+```javascript
+{
+    "code": 40000,
+    "message": "username is required.password is required.",
+    "data": null
+}
+```
 
-cache integrated
+- Cache integrated
 
-signal uses
-
-### Caching
-> drf-extensions
+Cache response with the help of django signals and drf-extensions caching
 
 
-### Deploy
-> uWSGI + Docker
+### Startup
+#### Install dependencies
+> ```pip install -r requirements.txt```
+
+#### Config local settings
+> ```cd drf_tpl```
+
+Create a new file `settings_local.py`, paste following config into it and replace `***` with your own real config. You could even replace database engine depending on your situation:
+```Python
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': '***',
+        'USER': '***',
+        'PASSWORD': '***',
+        'HOST': '***',
+    }
+}
+```
+#### Have fun
+> python manage.py runserver
