@@ -17,7 +17,7 @@
 {
     "code": 50000,
     "message": "division by zero",
-    "data": null
+    "data": {}
 }
 ```
 
@@ -26,7 +26,7 @@
 {
     "code": 40000,
     "message": "username is required.password is required.",
-    "data": null
+    "data": {}
 }
 ```
 
@@ -42,7 +42,7 @@ Cache response with the help of django signals and drf-extensions caching
 #### Config local settings
 > ```cd drf_tpl```
 
-Create a new file `settings_local.py`, paste following config into it and replace `***` with your own real config. You could even replace database engine depending on your situation:
+Create a new file `settings_local.py`, paste following config into it and replace `***` with your own real config. You could even replace database engine depending on your situation.
 ```Python
 DATABASES = {
     'default': {
