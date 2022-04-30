@@ -1,8 +1,1 @@
-#!/bin/bash
-
-python /drf_tpl/manage.py makemigrations&&
-python /drf_tpl/manage.py migrate&&
-uwsgi --ini /drf_tpl/deploy/uwsgi.ini&&
-tail -f /dev/null
-
-exec "$@"
+docker run -itd -p 8005:8000 drf_tpl
