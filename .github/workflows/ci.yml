@@ -13,4 +13,4 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: cd ~/drf_tpl && sh all_in_one_restart.sh
+        script: cd ~/drf_tpl/deploy && sh all_in_one_restart.sh
