@@ -10,7 +10,6 @@ jobs:
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
+        username: root
         password: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.PORT }}
         script: cd ~/drf_tpl/deploy && sh all_in_one_restart.sh
