@@ -5,7 +5,7 @@ class CustomRenderer(JSONRenderer):
 
     def render(self, data, accepted_media_type=None, renderer_context=None):
         response = {
-          "code": 10000,
+          "code": 1000,
           "message": "success",
           "data": data,
         }
