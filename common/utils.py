@@ -1,4 +1,4 @@
-from functools import reduce, partial
+from functools import reduce
 
 
 def deep_get(_dict, keys, default=None):
